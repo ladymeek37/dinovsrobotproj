@@ -8,7 +8,7 @@ class Battlefield:
     def run_game(self):
         pass
     def display_welcome(self):
-        pass
+        print("Welcome to the extreme battle of Robot vs. Dinosaur!")
     def battle_phase(self):
         pass
     def display_winner(self):
