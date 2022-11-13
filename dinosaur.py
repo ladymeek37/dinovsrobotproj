@@ -1,16 +1,15 @@
 
 class Dinosaur:
-    def __init__(self):
-        self.name = "T-rex"
-        self.health = 100
-        self.attack_power = 10
-    def attack(self, robot_health):
-        print(f"{self.name} attacks Wallie!")
-        robot_health = 100
-        robot_health -= self.attack_power
-        print(f"Wallie got hit by {self.name}!")
-        print(f"Wallie's health: {robot_health}")
-        pass
+    def __init__(self, name, attack_power):
+        self.name = name
+        self.attack_power = attack_power
+        self.dinosaur_health = 100
+    def attack(self, robot):
+            print(f"T-rex got hit by Wallie's gun!")
+            self.dinosaur_health -= 17
+            print(f"T-rex health: {self.dinosaur_health}")
+            pass
+        
 
 
         

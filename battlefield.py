@@ -3,9 +3,9 @@ from robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.robot = Robot()
-        self.dinosaur = Dinosaur()
-        
+        self.robot = Robot("Wallie")
+        self.dinosaur = Dinosaur("T-rex", 7)
+
     def run_game(self):
         pass
 
@@ -13,14 +13,15 @@ class Battlefield:
         print("Welcome to the extreme battle of Robot vs. Dinosaur!")
         pass
 
-    def battle_phase(self,winner):
-        self.winner = winner
-        while self.robot.health > 0 and self.dinosaur.health > 0:
+    def battle_phase(self):
+        self.robot = Robot("Wallie")
+        self.dinosaur = Dinosaur("T-rex", 7)
+        while self.robot.robot_health > 0 and self.dinosaur.dinosaur_health > 0:
             self.dinosaur.attack(self.robot)
             self.robot.attack(self.dinosaur)
-            if self.dinosaur.health <= 0:
+            if self.dinosaur.dinosaur_health <= 0:
                 self.winner = self.robot.name
-            elif self.robot.health <= 0:
+            elif self.robot.robot_health <= 0:
                 self.winner = self.dinosaur.name
             pass
 
