@@ -6,10 +6,10 @@ class Robot:
         self.active_weapon = Weapon("Gun", 7)
     def attack(self, dinosaur):
         print("")
-        print(f"T-rex attacks {self.name} for 10 damage!")
-        self.robot_health -= 20
-        print(f"Wallie's remaining health: {self.robot_health}")
+        dinosaur.dinosaur_health -= self.active_weapon.attack_power  
+        print(f"{self.name} hit {dinosaur.name} with {self.active_weapon.name} for {self.active_weapon.attack_power} damage!")
+        print(f"{dinosaur.name} has {dinosaur.dinosaur_health} health remaining...")
         print("")
 
-        pass
 
+    

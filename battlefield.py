@@ -8,17 +8,18 @@ class Battlefield:
 
     def display_welcome(self):
         print("")
-        print("Welcome to the extreme battle of Robot vs. Dinosaur!")
+        print("WELCOME TO THE EXTREME BATTLE OF DINOSAUR VS. ROBOT!")
         print("Only one side will take the victory!")
         print("")
         pass
 
     def battle_phase(self):
-        self.robot = Robot("Wallie")
-        self.dinosaur = Dinosaur("T-rex", 7)
+        # self.robot = Robot("Wallie")
+        # self.dinosaur = Dinosaur("T-rex", 7)
         while self.robot.robot_health > 0 and self.dinosaur.dinosaur_health > 0:
             self.dinosaur.attack(self.robot)
-            self.robot.attack(self.dinosaur)
+            if self.robot.robot_health > 0:
+                self.robot.attack(self.dinosaur)
             if self.dinosaur.dinosaur_health <= 0:
                 self.winner = self.robot.name
             elif self.robot.robot_health <= 0:
