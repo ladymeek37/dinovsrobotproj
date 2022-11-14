@@ -5,9 +5,11 @@ class Dinosaur:
         self.attack_power = attack_power
         self.dinosaur_health = 100
     def attack(self, robot):
-            print(f"T-rex got hit by Wallie's gun!")
+            print ("")
+            print(f"{self.name} got hit by Wallie's gun for 7 damage!")
             self.dinosaur_health -= 17
-            print(f"T-rex health: {self.dinosaur_health}")
+            print(f"{self.name} health: {self.dinosaur_health}")
+            print ("")
             pass
         
 

@@ -7,7 +7,10 @@ class Battlefield:
         self.dinosaur = Dinosaur("T-rex", 7)
 
     def display_welcome(self):
+        print("")
         print("Welcome to the extreme battle of Robot vs. Dinosaur!")
+        print("Only one side will take the victory!")
+        print("")
         pass
 
     def battle_phase(self):
@@ -23,7 +26,8 @@ class Battlefield:
             pass
 
     def display_winner(self):
-        print(f"{self.winner} won the epic battle of Dinosaur vs. Robot!")
+        print(f"{self.winner} took the victory, winning the epic battle of Dinosaur vs. Robot!!!")
+        print("")
         pass
 
     def run_game(self):
